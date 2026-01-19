@@ -1,0 +1,84 @@
+/* CSS styles for Tax Declaration Report */
+
+.tax-summary {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.tax-summary h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tax-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tax-summary th {
+    background-color: #f5f7fa;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #d1d8dd;
+}
+
+.tax-summary td {
+    padding: 8px;
+    border: 1px solid #d1d8dd;
+    text-align: left;
+}
+
+.tax-summary td:first-child {
+    text-align: left;
+}
+
+.tax-summary .tax-difference {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.tax-summary .tax-difference td:nth-child(3) {
+    color: #e74c3c;
+}
+
+/* Styling for sales and purchase transactions */
+.transaction-sales {
+    color: #27ae60;
+}
+
+.transaction-purchase {
+    color: #2980b9;
+}
+
+/* Chart styles */
+.tax-chart {
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* RTL support */
+.rtl-enabled .tax-summary {
+    direction: rtl;
+}
+
+.rtl-enabled .tax-summary td:first-child {
+    text-align: right;
+}
+
+/* Print styles */
+@media print {
+    .tax-summary {
+        page-break-inside: avoid;
+    }
+    
+    .tax-chart {
+        page-break-before: always;
+    }
+    
+    .page-break {
+        page-break-after: always;
+    }
+}
